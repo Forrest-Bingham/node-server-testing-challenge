@@ -36,10 +36,9 @@ describe('Pokemon Model', function() {
             // expect(dex).toHaveLength(0);
             await Pokemon.insert({name:"Diglett"});
             await Pokemon.insert({name:"Ekans"});
-            
+            await Pokemon.remove(2);
+
             const dex2 = await db('pokedex');
-            expect(dex2).toHaveLength(2);
-             await Pokemon.remove({id:1});
             expect(dex2).toHaveLength(1);
 
 

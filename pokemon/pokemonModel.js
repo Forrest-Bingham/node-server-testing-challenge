@@ -18,7 +18,7 @@ async function update(id, changes) {
 
 function remove(id) {
   return db('pokedex')
-  .where({id:id})
+  .where({id})
   .del(id);
 }
 
